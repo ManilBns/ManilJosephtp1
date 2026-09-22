@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   imports: [],
@@ -6,4 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './carre.scss',
   templateUrl: './carre.html',
 })
-export class Carre {}
+export class Carre {
+  couleurChoisie = output<string>();
+
+  onClic(couleur: string): void {
+    this.couleurChoisie.emit(couleur);
+  }
+}

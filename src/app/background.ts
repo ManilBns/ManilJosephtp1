@@ -1,4 +1,11 @@
-import { Service } from '@angular/core';
+import { Service, signal } from '@angular/core';
 
 @Service()
-export class Background {}
+export class Background {
+  couleur = signal('white');
+
+  changerCouleur(nouvelleCouleur: string): void {
+    this.couleur.set(nouvelleCouleur);
+    console.log('nouvelle couleur :', this.couleur());
+  }
+}
