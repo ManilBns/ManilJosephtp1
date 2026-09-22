@@ -1,0 +1,18 @@
+.carre {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  position: fixed;
+  inset: 0; // équivalent à top:0; right:0; bottom:0; left:0; donc crée un cadre virtuel de la taille de tout l'écran
+  margin: auto; /*centrer le carré dans la page*/
+  display: grid; /*devient un conteneur de grille*/
+  grid-template-columns: 1fr 1fr; /*découpe en deux colonnes égales*/
+  gap: 8px; /*le blanc entre les carreaux*/
+  padding: 8px; /*le blanc entre les carreaux et le bord du carré*/
+  box-sizing: border-box; /*pour que le padding et la bordure soient inclus dans la taille du carré qui est de 400px*/
+}
+
+.carreau-rouge  { background-color: #F25022; }
+.carreau-vert   { background-color: #7FBA00; }
+.carreau-bleu   { background-color: #00A4EF; }
+.carreau-jaune  { background-color: #FFB900; }
