@@ -7,9 +7,9 @@ import { Component, output } from '@angular/core';
   templateUrl: './carre.html',
 })
 export class Carre {
-  couleurChoisie = output<string>();
+  public couleurChoisie = output<string>();
 
-  onClick(couleur: string): void {
+  public onClick(couleur: string): void {
     this.couleurChoisie.emit(couleur);
   }
 }

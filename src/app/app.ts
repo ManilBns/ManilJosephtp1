@@ -11,17 +11,17 @@ import { Carre } from './carre/carre';
   templateUrl: './app.html',
   host: {
     '[style.background-color]': 'couleur()',
-    '(click)': 'black()'
+    '(click)': 'reinitialiser()'
   },
 })
 export class App {
   protected readonly title = signal('ManilBenmoussaTP1');
-  couleur = signal('white'); // Déclaration du signal pour la couleur de fond
+  public couleur = signal('white'); // Déclaration du signal pour la couleur de fond
 
-  // reinitialiser(): void {
-  //   this.couleur.set('white');
-  // }
-  black(): void {
+  public reinitialiser(): void {
+    this.couleur.set('white');
+  }
+  public black(): void {
     this.couleur.set('black');
   }
 }
