@@ -9,7 +9,7 @@ import { Component, output } from '@angular/core';
 export class Carre {
   couleurChoisie = output<string>();
 
-  onClic(couleur: string): void {
+  onClick(couleur: string): void {
     this.couleurChoisie.emit(couleur);
   }
 }

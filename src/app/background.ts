@@ -6,6 +6,5 @@ export class Background {
 
   changerCouleur(nouvelleCouleur: string): void {
     this.couleur.set(nouvelleCouleur);
-    console.log('nouvelle couleur :', this.couleur());
   }
 }
